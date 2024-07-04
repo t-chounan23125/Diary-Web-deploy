@@ -1,0 +1,241 @@
+
+
+/*   Button to add New Task */
+/* button add new note styling */
+#add-new {
+    margin-top: 56px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    width: 210px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: sticky;
+    top: 150px;
+    z-index: 9;
+}
+#add-new-task {
+    background-color: rgb(207, 207, 207);
+    color: #646464;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 3px solid #5b74a5bf;
+    
+}
+.add-wrap {
+    background-color: rgb(201, 224, 204);
+    width: 32px;
+    height: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid rgb(182, 182, 182);
+    cursor: pointer;
+    
+}
+.add-wrap:hover {
+    background-color: #abbea9;
+    border: 1px solid rgb(255, 253, 253);
+}
+
+/* plus sign icon */
+#add {
+    width: 14px;
+    margin-top: 6px;
+}
+
+/* text styling */
+#add-new span {
+    padding: 3px;
+    background-color: #aafdc825;
+    border-radius: 3px;
+    color: #fbfbfb;
+}
+
+/* plant image */
+#add-new #seed {
+    width: 32px;
+}
+
+
+
+/*  Grid Card  */
+/* background filter blur for grid card */
+.filter{
+    padding: 23px;
+    backdrop-filter: blur(3px);
+    z-index: -1;
+    height: 50vh;
+    position: absolute;
+    width: 65%;
+} 
+
+/* grid card  styling*/
+.tasks-container {
+    
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    align-content: flex-start;
+    align-items: stretch;
+    gap: 15px;
+    padding:  40px;
+    height: 62vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+       
+}
+
+/* card  styling*/
+.task {
+
+    position: relative;
+    color: #ffffff;
+    border: 1px solid rgb(198, 198, 198);
+    padding: 10px 0px 10px 0px;
+    height: 260px;
+    border-radius: 12px;
+    backdrop-filter: blur(13px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-block-start: 23px;
+    overflow-y: hidden;
+    
+}
+
+/* date display styling */
+.task #dt {
+    width: 130px;
+    position: absolute;
+    top: 2;
+    right: 0;
+    padding-right: 10px;
+    margin: 0;
+    font-size: 15px;
+    text-align: end;
+}
+
+/* title display styling */
+.title-box {
+    height: 30px;
+    background-color: #0e453998;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 26px;
+    padding-left: 11px;
+    padding-right: 11px;
+    font-size: 18px;
+    font: weight 600px;
+    border-bottom:1px solid rgba(6, 43, 30, 0.817);
+    border-top:1px solid rgba(103, 184, 198, 0.914);
+    text-overflow: ellipsis;
+      
+}
+.title-box p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* height: 23px;  */
+}
+
+/* text display styling */
+.task #text {
+    padding: 14px 10px 10px 14px;
+    height: 100px;
+    margin-bottom: 23px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* text-wrap: balance; */
+    text-overflow: ellipsis;
+    font-size: 16px;
+    background-color: rgba(38, 77, 100, 0.249);
+    border-radius: 3px;
+    backdrop-filter: blur(25px);
+}
+
+/* styling icon for edit and delete task */
+.option {
+    position: absolute;
+    bottom: 0;
+    right: 12px;
+    width: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: 25px;
+    padding: 4px;
+    
+}
+
+/* sizing the icon of option under the card */
+ .option img {
+    width: 20px;
+    cursor: pointer;
+}
+
+.option img {
+    display: none;
+}
+
+
+/* Hover */
+/* show option when hover on card */
+.task:hover {
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(128, 204, 245, 0.572); 
+    color: #000000;
+    box-shadow: 2px 12px 12px 5px rgba(33, 33, 33, 0.569);
+}
+.task:where(:hover ) .option img {
+    display: inline;
+}
+.task:where(:hover ) #text {
+    
+    color: #113255;
+    font-weight: 500;
+    font-size: 17px;
+    background: color 0;
+}
+.task:where(:hover ) .title-box {
+    color:#e4f3fa;
+}
+
+/* == Media Query == */
+
+@media (max-width: 600px) {
+    .task{
+        border: 2px solid rgb(255, 255, 255);
+        background-color: rgba(128, 204, 245, 0.572); 
+        color: #ffffff;
+        box-shadow: 2px 12px 12px 5px rgba(33, 33, 33, 0.569);
+    }
+    .tasks-container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          
+    }
+    .task .option img {
+        display: inline;
+    }
+
+
+}
+@media (max-width: 390px) {
+    .tasks-container {
+        
+        padding:  20px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        
+           
+    }
+    #add-new {
+        margin-top: 40px;
+        
+    }
+}

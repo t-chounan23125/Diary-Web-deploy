@@ -1,0 +1,131 @@
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+   
+    background: url('../../img/kou-11-1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    transition: background-image 0.5s ease-in-out;
+    overflow: hidden;
+    
+    
+    
+}
+
+
+/* Start Main Content */
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+
+/* main section disclude side bar and footer */
+.main-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.blur{
+    backdrop-filter: blur(20px);
+}
+
+
+header {
+    width: 100%;
+    backdrop-filter: blur(20px);   
+}
+
+
+.burger-nav {
+    position: absolute;
+    cursor: pointer;
+    top: 35px;
+    opacity: 0;
+}
+.title-web {
+    
+    height: 154px;
+    text-align: center;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* text title on header */
+.title-web h2{
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 33px;
+    font-weight: bolde;
+    color:rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgba(146, 248, 238, 0.7);
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: #9dbef3;      
+}
+
+#plant-svg{
+    width: 40px;
+    filter: drop-shadow(0 0 0.75rem rgb(56, 255, 248)); 
+}
+
+/* divider of header section */
+#divider {
+    background: #e6e6e6ec;
+    border-top:7px solid #ffffff;
+    border-bottom: 5px solid #aeaeae;
+    filter: drop-shadow(0 20px 0.75rem rgb(7, 19, 19)); 
+    height: 10px;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    z-index: 5;
+
+}
+
+.footer-btn {
+    position: absolute;
+    bottom: -115px;
+    right: 56px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* == Media Query == */
+
+@media (max-width: 1133px) {
+    .burger-nav {
+        opacity: 1;
+        
+    }
+}
+
+@media (max-width: 600px) {
+    .title-web {
+        height: 100px;
+        text-align: center;  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .title-web h2{
+        font-family: "Playwrite DE Grund", cursive;
+        font-size: 15px;
+        font-weight: bolde;
+        color:rgb(255, 255, 255);
+        text-shadow: 2px 2px 5px rgba(146, 248, 238, 0.7);
+        -webkit-text-stroke-width: 0.3px;
+        -webkit-text-stroke-color: #9dbef3;      
+    }
+    #plant-svg{
+        width: 20px;
+        filter: drop-shadow(0 0 0.75rem rgb(56, 255, 248)); 
+    }
+    
+}

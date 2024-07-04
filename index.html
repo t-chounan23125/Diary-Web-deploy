@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>Diary web app</title>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- Start Side Bar -->
+        <diary-sidebar></diary-sidebar>
+        <!-- End Side Bar -->
+        <section class="main-section">
+            <!-- Start Header -->
+            <header>
+                <div class="burger-nav"><img src="/src/img/hamburger.png" alt=""></div>
+                <div class="title-web">
+                    <h2> ✧˖°<span> <img id="plant-svg" src="/src/img/plant.svg" alt="icon"></span> Diary We-ap ✧°<span> <img id="plant-svg" src="/src/img/plant.svg"  alt="icon"></span>˖°</h2>
+                </div>
+                <div id="divider">   
+                </div>
+            </header>
+            <!-- End Header -->
+            
+            <div>
+            <div id="add-new">
+                
+                <img id="seed" src="/src/img/seed.svg" alt="">
+                <span>Add New </span>
+                <div class="add-wrap">
+                    <img id="add" src="/src/img/add.png" alt="">
+                </div>
+            </div>
+            <div class="filter"> 
+            </div>
+            <section class="tasks-container">
+            </section>
+        </section>
+        <div class="footer-btn">
+            <img src="/src/img/chevron (2).png" alt="">
+        </div>
+    </div>
+
+    <!-- Start Modal -->
+    <div class="modal hidden">
+        <span class="closebtn"> <img id="cross" src="/src/img/close (2).png" alt=""></span>
+                
+        <input type="text" placeholder="Untitled" value="Untitled" id="modal-title" name="" >
+        <input id="time" type="date">
+        <textarea placeholder="Note..." id="modal-text"></textarea>
+        
+        <div class="modal-footer">
+            <button id="save-btn" type="submit" ><span>Save</span></button>
+        </div>
+        <p id="message"> </p>
+    </div> 
+    <!-- End Modal -->
+    <!-- Start  Footer -->
+    <diary-footer></diary-footer>
+    <!-- End footer -->
+
+    <!-- script file -->
+    <script src="/src/js/components/sidebar.js"></script>
+    <script src="/src/js/components/footer.js"></script>
+    <script src="/src/js/pages/home.js"></script>
+    <script src="/src/js/layout/modal.js"></script>
+</body>
+
+</html>

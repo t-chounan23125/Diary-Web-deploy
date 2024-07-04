@@ -1,0 +1,287 @@
+
+/* Side Bar Container */
+.side-bar {
+    width: 375px ;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    backdrop-filter: blur(4px);
+    position: sticky;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s;
+    
+
+}
+
+.side-content {
+    width: 100%;
+    height: 80%;
+    background-color: #050c1163;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+/* Profile */
+/* profile wraper */
+.profile { 
+    height:10vh ;
+    width: 345px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: 0;
+    right: 12px;
+    display: flex;  
+}
+
+/* white circle outside of profile picture */
+.circle {
+    min-width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    border: 2px solid seashell;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* profile image */
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+   
+}
+
+
+
+/* Button To Change Background Image*/
+#switch-button {
+    position: absolute;
+    right: 11px;
+    top: 120px;
+    margin-left: 12px;
+    filter: drop-shadow(0 10px 0.2rem rgba(0, 0, 0, 0.592));
+    
+    background: rgba(184, 247, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.713);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    color: black;
+}
+
+#switch-button:hover {
+    background: rgba(164, 195, 244, 0.55);
+    filter: drop-shadow(0 16px 0.2rem rgb(7, 19, 19)); 
+}
+
+
+
+/* List Note Section */
+/* list note title styling */
+#list-note-title {
+    position: absolute;
+    width: 100px;
+    background-color: rgb(255, 238, 207);
+    left: 45px;
+    padding: 2px  5px;
+    top: 163px
+    
+}
+.list-note-title {
+    border-radius: 53px;
+}
+
+/* flower img */
+#flower {
+    position: absolute;
+    top: 150px
+}
+
+
+
+/* List Task Container */
+.all-task-container{
+
+    position: absolute;
+   
+    height: 500px;
+    top:220px;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0 11px ;
+    overflow-y: scroll;  
+    resize: vertical;
+    scrollbar-width: none;
+    border:1px solid rgba(255, 255, 255, 0.677);
+
+}
+/* .all-task-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.all-task-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.677);
+    border-radius: 10px;
+} */
+
+/* list task*/
+.task-contain-title {
+    width: 90%;
+    height: 20%;
+    background-color: rgba(101, 153, 137, 0.638);
+    border-bottom-right-radius: 15px ;
+    border-top-left-radius:15px ;
+    border-top-right-radius:15px ;
+    padding-left: 12px;
+    border:solid 1px rgba(25, 26, 57, 0.452);
+    color: aliceblue;
+    filter: drop-shadow(0 10px 0.2rem rgb(7, 19, 19));
+    overflow: hidden;
+    
+}
+.task-contain-title:hover{
+    filter: drop-shadow(0 10px 0.2rem rgb(194, 249, 237));
+}
+
+
+
+/* Menu Bar */
+.menu-bar {
+    position: absolute;
+    height: 200px;
+    width: 140px;
+    background-color: rgba(240, 248, 255, 0);
+    bottom: 12px;
+    right: 0;
+}
+
+ /* button menu bar */
+.home, .account, .setting, .how{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.close-btn{
+    opacity: 0;
+}
+
+/* sizing the icon images  of menue bar*/
+#house, #profile, #setting, #question {
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+}
+
+/* hide the name of menu bar */
+#name-home, #name-profile, #name-setting, #name-quest{
+    opacity: 0;
+}
+
+/* styling the name menu bar */
+.name-option {
+
+    background-color: rgb(255, 238, 207);
+    border-radius: 8px;
+    width: 74px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30px; 
+}
+
+/* styling the icon of the menu bar */
+.icon {
+    
+    background-color: rgba(240, 248, 255, 0.857);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px ;
+    height: 40px;
+    border-radius: 10px;
+    filter: drop-shadow(0 10px 0.2rem rgb(34, 58, 58));
+}
+
+
+/* hover icon menu bar */
+.home:where(:hover ) #name-home{
+    opacity: 1;
+}
+.account:where(:hover) #name-profile{
+    opacity: 1;
+}
+.setting:where(:hover) #name-setting{
+    opacity: 1;
+}
+.how:where(:hover) #name-quest{
+    opacity: 1;
+}
+
+
+/* == Media Query == */
+
+@media (max-width: 1133px) {
+    .side-bar{
+        position: absolute;
+        left: -400px;
+        z-index: 11;
+        transition: transform 0.3s;
+        height: 100vh;
+    }
+    
+    .circle {
+        min-width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 2px solid seashell;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .open-nav{
+        transform: translateX(400px);
+    }
+    
+    /* profile image */
+    .profile img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+       
+    }
+    .side-content {
+        
+        background-color: #0b1a25a6;
+        
+    }
+    
+    .close-btn{
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 0.593);
+        border-radius: 8px;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top:25px;
+        left: 3px;
+    }
+}
+
+
