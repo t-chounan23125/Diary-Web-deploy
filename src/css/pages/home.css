@@ -27,6 +27,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    
 }
 .blur{
     backdrop-filter: blur(20px);
@@ -127,5 +128,11 @@ header {
         width: 20px;
         filter: drop-shadow(0 0 0.75rem rgb(56, 255, 248)); 
     }
+    .main-section {
+        
+        overflow-y: scroll;
+        scrollbar-width: none;
+    }
+    
     
 }

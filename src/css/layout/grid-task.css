@@ -218,11 +218,13 @@
     }
     .tasks-container {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        overflow-y: visible;
           
     }
     .task .option img {
         display: inline;
     }
+    
 
 
 }
@@ -235,7 +237,9 @@
            
     }
     #add-new {
-        margin-top: 40px;
+        margin-top: 10px;
+        position: sticky;
+        top: 12px;
         
     }
 }

@@ -7,7 +7,7 @@ class Footer extends HTMLElement {
         <footer>
             <div class="copy-right">
                 <div class="credit">
-                    <p>Background image by :<a href="https://www.artstation.com/artwork/KrZr34">Kou (寇)</a></p>
+                    <p>Background image by :<a href="https://www.artstation.com/artwork/KrZr34" target="_blank">Kou (寇)</a></p>
                 </div>
                 <div class="email">
                     <p>Artist email: email-250197343@qq.com </p>
@@ -19,9 +19,9 @@ class Footer extends HTMLElement {
                 <div class="close-footer-btn"><img src="/src/img/chevron (3).png" alt="icon"></div>
                 <h4>Let's connect</h4>
                 <div class="media">
-                    <img src="/src/img/instagram (2).png" alt="">
-                    <img src="/src/img/email.png" alt="">
-                    <img src="/src/img/pinterest (1).png" alt="">
+                <a href="https://www.instagram.com/just_nah2311/" target="_blank"><img src="/src/img/instagram (2).png" alt="icon"></a>
+                <a href="mailto: tch23125@gmail.com" target="_blank"><img src="/src/img/email.png" alt="icon"></a>
+                <a href="https://pin.it/796rwAHwn" target="_blank"><img src="/src/img/pinterest (1).png" alt="icon"></a>
                 </div>
             </div>
        </footer>  `;
